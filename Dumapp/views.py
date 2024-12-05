@@ -1,9 +1,23 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from .models import Member, Contact
+
+
 
 # Create your views here.
 
 def index(request):
-    return render(request, 'index.html')
+    if request.method=='POST':
+        if Member.objects.filter(
+                username=request.POST['username'],
+                password=request.POST['password'] ).exists():
+             members = Member.objects.get(
+                 username=request.POST['username'],
+                 password=request.POST['password'])
+             return render(request,'index.html',{'members':members})
+        else:
+             return render(request,'login.html')
+    else:
+        return render(request,'login.html')
 
 def blogdetails(request):
     return render(request, 'blog-details.html')
@@ -30,5 +44,28 @@ def portfolio(request):
     return render(request, 'portfolio.html')
 
 def contact(request):
-    return render(request, 'contact.html')
+    if request.method == 'POST':
+        all = Contact(name=request.POST['name'],
+                      email=request.POST['email'],
+                      subject=request.POST['subject'],
+                      message=request.POST['message']
+                      )
+        all.save()
+        return redirect('/contact')
+    else:
+        return render(request, 'contact.html')
 
+def login(request):
+    return render(request, 'login.html')
+def register(request):
+    if request.method=='POST':
+        members= Member(
+            name=request.POST['name'],
+            username=request.POST['username'],
+            password=request.POST['password'],
+        )
+        members.save()
+        return redirect('/login')
+    else:
+        return render(request,'register.html')
+    

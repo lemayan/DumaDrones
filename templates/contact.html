@@ -53,32 +53,85 @@
         </div>
   
         <div class="col-lg-8">
-          <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade" data-aos-delay="100">
+          <form action="" method="POST">
+            {%csrf_token%}
             <div class="row gy-4">
   
               <div class="col-md-6">
-                <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required="required">
               </div>
   
               <div class="col-md-6">
-                <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="required">
               </div>
   
               <div class="col-md-12">
-                <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required="required">
               </div>
   
               <div class="col-md-12">
-                <textarea class="form-control" name="message" rows="8" placeholder="Message" required=""></textarea>
+                <textarea class="form-control" name="message" rows="8" placeholder="Message" id="message" required="required"></textarea>
               </div>
   
               <div class="col-md-12 text-center">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-  
-                <button type="submit">Send Message</button>
+                <div class="loading" style="display: none;">Loading...</div>
+                <div class="error-message" style="display: none; color: red;">An error occurred. Please try again.</div>
+                <div class="sent-message" style="display: none; color: green;">Your message has been sent. Thank you!</div>
+              
+                <button type="submit" class="btn btn-teal">Send Message</button>
               </div>
+              
+              <style>
+                /* Styling for loading, error, and sent message */
+                .loading, .error-message, .sent-message {
+                  font-size: 16px;
+                  font-weight: 500;
+                  margin-bottom: 10px;
+                }
+              
+                .loading {
+                  color: #ffa500; /* Orange color for loading */
+                }
+              
+                .error-message {
+                  color: red; /* Red for errors */
+                }
+              
+                .sent-message {
+                  color: green; /* Green for success */
+                }
+              
+                /* Styling for the submit button */
+                .btn-teal {
+                  background-color: #008080; /* Teal color */
+                  color: white;
+                  padding: 10px 20px;
+                  border: none;
+                  border-radius: 5px;
+                  font-size: 16px;
+                  font-weight: 600;
+                  cursor: pointer;
+                  transition: background-color 0.3s ease;
+                }
+              
+                .btn-teal:hover {
+                  background-color: #004d4d; /* Darker teal on hover */
+                }
+              
+                /* Add some margin and styling for the button */
+                .btn-teal {
+                  display: inline-block;
+                  padding: 12px 25px;
+                  margin-top: 20px;
+                }
+              
+                /* Centering the whole div */
+                .col-md-12.text-center {
+                  text-align: center;
+                  margin-top: 20px;
+                }
+              </style>
+              
   
             </div>
           </form>

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Duma Drones</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f7fa;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            padding: 2rem;
+        }
+
+        .card h1 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: #26a69a;
+        }
+
+        .form-check {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-check input {
+            margin-right: 0.5rem;
+        }
+
+        .form-check label {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #26a69a;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #004d40;
+        }
+
+        .link {
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .link a {
+            color: #26a69a;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Register</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Choose a username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Create a password" required>
+            </div>
+            <div class="form-check">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I agree to the <a href="#">Terms of Service</a></label>
+            </div>
+            <button type="submit" class="btn">Sign Up</button>
+            <div class="link">
+                <a href="{% url 'login' %}">Already have an account? Log in</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
