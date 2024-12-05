@@ -36,5 +36,7 @@ urlpatterns = [
     path('show_images/', views.show_images, name='show_images'),
     path('edit_image/<int:pk>/', views.edit_image, name='edit_image'),
     path('delete_image/<int:pk>/', views.delete_image, name='delete_image'),
-
+    path('pay_package/', views.pay_package, name='pay_package'),
+    path('stk/', views.stk, name='stk'),
+    path('token/', views.token, name='token')
 ]

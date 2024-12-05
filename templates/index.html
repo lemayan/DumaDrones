@@ -538,17 +538,11 @@
 </section><!-- /Team Section -->
 
  <!-- Pricing Section -->
-<section id="pricing" class="pricing section">
+ <section id="pricing" class="pricing section">
 
-  <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Pricing</h2>
-    <p>Choose the perfect plan that suits your needs, all designed to ensure timely and reliable drone deliveries for essentials.</p>
-  </div><!-- End Section Title -->
+  <div class="container" data-aos="fade-up">
 
-  <div class="container" data-aos="zoom-in" data-aos-delay="100">
-
-    <div class="row g-4">
+    <div class="row gy-4">
 
       <!-- Essential Drop -->
       <div class="col-lg-4">
@@ -565,9 +559,11 @@
             <li class="na"><i class="bi bi-x"></i> <span>Priority delivery</span></li>
             <li class="na"><i class="bi bi-x"></i> <span>Multiple deliveries per month</span></li>
           </ul>
-          <div class="text-center"><a href="#" class="buy-btn">Get Started</a></div>
+          <div class="text-center">
+            <a href="{% url 'pay_package' %}?package=essential_drop&amount=2000" class="buy-btn">Get Started</a>
+          </div>
         </div>
-      </div><!-- End Pricing Item -->
+      </div>
 
       <!-- Priority Glide -->
       <div class="col-lg-4">
@@ -576,8 +572,7 @@
           <div class="icon">
             <i class="bi bi-rocket"></i>
           </div>
-
-          <h4><sup>KSh</sup>5,000<span> / month</span></h4>
+          <h4><sup>KSh</sup>5000<span> / month</span></h4>
           <ul>
             <li><i class="bi bi-check"></i> <span>Advanced drone delivery features</span></li>
             <li><i class="bi bi-check"></i> <span>Priority support</span></li>
@@ -585,9 +580,11 @@
             <li><i class="bi bi-check"></i> <span>Up to 5 deliveries per month</span></li>
             <li><i class="bi bi-check"></i> <span>Scheduled deliveries</span></li>
           </ul>
-          <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+          <div class="text-center">
+            <a href="{% url 'pay_package' %}?package=priority_glide&amount=5000" class="buy-btn">Buy Now</a>
+          </div>
         </div>
-      </div><!-- End Pricing Item -->
+      </div>
 
       <!-- Elite Express -->
       <div class="col-lg-4">
@@ -596,7 +593,7 @@
           <div class="icon">
             <i class="bi bi-send"></i>
           </div>
-          <h4><sup>KSh</sup>8,000<span> / month</span></h4>
+          <h4><sup>KSh</sup>8000<span> / month</span></h4>
           <ul>
             <li><i class="bi bi-check"></i> <span>Unlimited drone deliveries</span></li>
             <li><i class="bi bi-check"></i> <span>Access to priority drones</span></li>
@@ -604,15 +601,18 @@
             <li><i class="bi bi-check"></i> <span>Drone tracking and analytics</span></li>
             <li><i class="bi bi-check"></i> <span>Dedicated support</span></li>
           </ul>
-          <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+          <div class="text-center">
+            <a href="{% url 'pay_package' %}?package=elite_express&amount=8000" class="buy-btn">Buy Now</a>
+          </div>
         </div>
-      </div><!-- End Pricing Item -->
+      </div>
 
     </div>
 
   </div>
 
-</section><!-- /Pricing Section -->
+</section>
+<!-- /Pricing Section -->
 
  <!-- Faq Section -->
 <section id="faq" class="faq section">
