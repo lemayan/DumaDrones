@@ -1,0 +1,110 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+<h2 class="text-center my-4">Uploaded Images</h2>
+
+<div class="container">
+    <div class="row justify-content-center">
+        {% for image in images %}
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm border-light rounded">
+                <img src="{{ image.image.url }}" alt="Uploaded Image" class="card-img-top" style="height: 300px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ image.title }}</h5>
+                    <p class="card-text"><strong>Quantity:</strong> {{ image.quantity }}</p>
+                    <p class="card-text"><strong>Description:</strong> {{ image.description }}</p>
+                    <p class="card-text"><strong>Delivery Address:</strong> {{ image.delivery_address }}</p>
+                    <p class="card-text"><strong>Contact Number:</strong> {{ image.contact_number }}</p>
+                    <div class="d-flex justify-content-between">
+                        <a href="{% url 'delete_image' pk=image.pk %}" class="btn btn-danger">Delete</a>
+                        <a href="{% url 'edit_image' pk=image.pk %}" class="btn btn-warning">Edit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <p class="text-center text-muted">No images uploaded yet.</p>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<style>
+    body {
+        background: #f4f7fc;
+        font-family: 'Arial', sans-serif;
+        padding: 20px;  /* Added padding for some spacing around the content */
+    }
+
+    .card-img-top {
+        border-radius: 8px 8px 0 0;
+    }
+
+    .card-body {
+        padding: 1.5rem;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .card-text {
+        font-size: 0.95rem;
+        color: #555;
+    }
+
+    .btn-danger, .btn-warning {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+    }
+
+    .btn-danger {
+        background-color: #dc3545;
+        color: white;
+    }
+
+    .btn-danger:hover {
+        background-color: #c82333;
+    }
+
+    .btn-warning {
+        background-color: #ffc107;
+        color: white;
+    }
+
+    .btn-warning:hover {
+        background-color: #e0a800;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin-top: 50px;  /* Added margin to create space above */
+        margin-bottom: 50px;  /* Added margin to create space below */
+    }
+
+    .row.justify-content-center {
+        margin-top: 30px;
+    }
+
+    .card {
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.2s ease;
+        margin-bottom: 30px;  /* Increased space between cards */
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .col-md-4 {
+        margin-bottom: 40px;  /* Increased spacing between cards */
+    }
+</style>
+
+{% endblock %}

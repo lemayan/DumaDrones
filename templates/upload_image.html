@@ -1,0 +1,137 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image - DumaDrones</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f9f9f9, #eef2f3);
+            font-family: 'Arial', sans-serif;
+        }
+        .form-container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 3rem auto;
+            max-width: 600px;
+        }
+        .form-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .form-header h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333;
+        }
+        .form-header p {
+            color: #666;
+        }
+        .form-control {
+            border-radius: 6px;
+        }
+        .btn-primary {
+            background-color: #5cb85c;
+            border: none;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #4cae4c;
+        }
+        .image-preview {
+            width: 100%;
+            height: auto;
+            margin-top: 1rem;
+            display: none;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        .success-message {
+            text-align: center;
+            color: #28a745;
+            font-size: 1.5rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="form-container">
+        <div class="form-header">
+            <h2>Upload Your Delivery Request</h2>
+            <p>Provide details and images for quick and precise deliveries.</p>
+        </div>
+
+        {% if message %}
+            <div class="success-message">
+                <p>{{ message }}</p>
+            </div>
+        {% endif %}
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="id_image" class="form-label">Upload Image</label>
+                <input type="file" class="form-control" id="id_image" name="image" accept="image/*" onchange="previewImage(event)">
+                <img id="image-preview" class="image-preview" alt="Image Preview">
+            </div>
+            <div class="mb-3">
+                <label for="id_title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="id_title" name="title" placeholder="E.g., Grocery Package">
+            </div>
+            <div class="mb-3">
+                <label for="id_quantity" class="form-label">Quantity</label>
+                <input type="number" class="form-control" id="id_quantity" name="quantity" placeholder="E.g., 5" min="1">
+            </div>
+            <div class="mb-3">
+                <label for="id_description" class="form-label">Description</label>
+                <textarea class="form-control" id="id_description" name="description" rows="3" placeholder="Describe the item(s)"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="id_delivery_address" class="form-label">Delivery Address</label>
+                <textarea class="form-control" id="id_delivery_address" name="delivery_address" rows="3" placeholder="Enter full address"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="id_contact_number" class="form-label">Contact Number</label>
+                <input type="text" class="form-control" id="id_contact_number" name="contact_number" placeholder="E.g., 0712345678">
+            </div>
+            <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- JavaScript for Image Preview -->
+<script>
+    function previewImage(event) {
+        const imagePreview = document.getElementById('image-preview');
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                imagePreview.src = e.target.result;
+                imagePreview.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+{% endblock %}

@@ -30,7 +30,11 @@ urlpatterns = [
     path('services/', views.services, name='services'),
     path('portfolio/', views.portfolio, name='portfolio'),
     path('contact/', views.contact, name='contact'),
-    path('', views.login, name='login'),
-    path('register/', views.register, name='register'),
-    
+    path('login/', views.login, name='login'),
+    path('', views.register, name='register'),
+    path('upload_image/', views.upload_image, name='upload_image'),
+    path('show_images/', views.show_images, name='show_images'),
+    path('edit_image/<int:pk>/', views.edit_image, name='edit_image'),
+    path('delete_image/<int:pk>/', views.delete_image, name='delete_image'),
+
 ]

@@ -1,5 +1,9 @@
-from django.shortcuts import render, redirect
-from .models import Member, Contact
+from django.shortcuts import get_object_or_404, render, redirect
+from django.contrib import messages
+
+
+from .models import Member, Contact, ImageModel
+from .forms import ImageUploadForm
 
 
 
@@ -68,4 +72,38 @@ def register(request):
         return redirect('/login')
     else:
         return render(request,'register.html')
-    
+
+
+def upload_image(request):
+    if request.method == 'POST':
+        form = ImageUploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            message = "Sending a drone your way!"  # Success message
+            return redirect('show_images')  # Redirect to show images after successful upload
+        else:
+            return render(request, 'upload_image.html', {'form': form, 'error': 'Please correct the errors below.'})
+    else:
+        form = ImageUploadForm()
+    return render(request, 'upload_image.html', {'form': form})
+
+def show_images(request):
+    images = ImageModel.objects.all()
+    return render(request, 'show_image.html', {'images': images})
+
+def delete_image(request, pk):
+    image = get_object_or_404(ImageModel, pk=pk)
+    image.delete()
+    return redirect('show_images')
+
+
+def edit_image(request, pk):
+    image = get_object_or_404(ImageModel, pk=pk)
+    if request.method == 'POST':
+        form = ImageUploadForm(request.POST, request.FILES, instance=image)
+        if form.is_valid():
+            form.save()
+            return redirect('show_images')  
+    else:
+        form = ImageUploadForm(instance=image)
+    return render(request, 'edit_image.html', {'form': form, 'image': image})
