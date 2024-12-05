@@ -16,7 +16,7 @@
                     <p class="card-text"><strong>Description:</strong> {{ image.description }}</p>
                     <p class="card-text"><strong>Delivery Address:</strong> {{ image.delivery_address }}</p>
                     <p class="card-text"><strong>Contact Number:</strong> {{ image.contact_number }}</p>
-                    <div class="d-flex justify-content-between">
+                    <div class="d-flex justify-content-between mt-3">
                         <a href="{% url 'delete_image' pk=image.pk %}" class="btn btn-danger">Delete</a>
                         <a href="{% url 'edit_image' pk=image.pk %}" class="btn btn-warning">Edit</a>
                     </div>
@@ -35,7 +35,7 @@
     body {
         background: #f4f7fc;
         font-family: 'Arial', sans-serif;
-        padding: 20px;  /* Added padding for some spacing around the content */
+        padding: 40px;
     }
 
     .card-img-top {
@@ -43,24 +43,25 @@
     }
 
     .card-body {
-        padding: 1.5rem;
+        padding: 2rem;
     }
 
     .card-title {
-        font-size: 1.25rem;
+        font-size: 1.4rem;
         font-weight: 600;
         color: #333;
     }
 
     .card-text {
-        font-size: 0.95rem;
+        font-size: 1rem;
         color: #555;
     }
 
     .btn-danger, .btn-warning {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
+        font-size: 1.1rem;
+        padding: 0.7rem 1.2rem;
         border-radius: 5px;
+        width: 45%;
     }
 
     .btn-danger {
@@ -82,9 +83,9 @@
     }
 
     .container {
-        max-width: 1200px;
-        margin-top: 50px;  /* Added margin to create space above */
-        margin-bottom: 50px;  /* Added margin to create space below */
+        max-width: 1300px;
+        margin-top: 40px;
+        margin-bottom: 40px;
     }
 
     .row.justify-content-center {
@@ -95,7 +96,7 @@
         border-radius: 10px;
         overflow: hidden;
         transition: transform 0.2s ease;
-        margin-bottom: 30px;  /* Increased space between cards */
+        margin-bottom: 20px;
     }
 
     .card:hover {
@@ -103,7 +104,11 @@
     }
 
     .col-md-4 {
-        margin-bottom: 40px;  /* Increased spacing between cards */
+        margin-bottom: 30px;
+    }
+
+    .d-flex {
+        gap: 1rem;
     }
 </style>
 
