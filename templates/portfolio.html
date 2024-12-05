@@ -1,0 +1,180 @@
+{%extends 'starter-page.html'%}
+{%load static%}
+{%block body%}
+    <!-- Portfolio Section -->
+<section id="portfolio" class="portfolio section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Portfolio</h2>
+      <p>Showcasing the innovative drone delivery services offered by Duma Drones</p>
+    </div><!-- End Section Title -->
+  
+    <div class="container">
+  
+      <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+  
+        <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-app">Drone Delivery</li>
+          <li data-filter=".filter-product">Emergency Kits</li>
+          <li data-filter=".filter-branding">Blog</li>
+          <li data-filter=".filter-books">User Education</li>
+        </ul><!-- End Portfolio Filters -->
+  
+        <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+  
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            <div class="portfolio-content h-100">
+              <a href="{% static 'static\assets\img2\portfolio\677b7073644a8e4e262f2e74def53549.png' %}" data-gallery="portfolio-gallery-app" class="glightbox">
+                <img src="{% static 'static\assets\img2\portfolio\677b7073644a8e4e262f2e74def53549.png' %}" class="img-fluid w-100" alt="Duma Drones Delivery App">
+              </a>
+              <div class="portfolio-info">
+                <h4><a href="portfoliodetails" title="More Details">Duma Drone Delivery App</a></h4>
+                <p>Our custom app for easy and fast drone delivery of essentials to your doorstep.</p>
+              </div>
+            </div>
+          </div><!-- End Portfolio Item -->
+  
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+            <div class="portfolio-content h-100">
+              <a href="{% static 'static\assets\img2\portfolio\73c3dbf434dbd4b59d5053f284ee7fcd.jpg' %}" data-gallery="portfolio-gallery-app" class="glightbox">
+                <img src="{% static 'static\assets\img2\portfolio\73c3dbf434dbd4b59d5053f284ee7fcd.jpg' %}" class="img-fluid" alt="Medical Kit Delivery">
+              </a>
+              <div class="portfolio-info">
+                <h4><a href="portfoliodetails" title="More Details">Emergency Medical Kits</a></h4>
+                <p>Fast delivery of medical kits for urgent health needs via drones.</p>
+              </div>
+            </div>
+          </div><!-- End Portfolio Item -->
+  
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+            <div class="portfolio-content h-100">
+              <a href="{% static 'static\assets\img2\portfolio\2bd61dd44912ac23cf7799280d140e8f.jpg' %}" data-gallery="portfolio-gallery-app" class="glightbox">
+                <img src="{% static 'static\assets\img2\portfolio\2bd61dd44912ac23cf7799280d140e8f.jpg' %}" class="img-fluid" alt="Branding Materials">
+              </a>
+              <div class="portfolio-info">
+                <h4><a href="portfoliodetails" title="More Details">Drone Fleet</a></h4>
+                <p> Showcase the types of drones you use for deliveries,highlighting their features, and capabilities.</p>
+              </div>
+            </div>
+          </div><!-- End Portfolio Item -->
+  
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+            <div class="portfolio-content h-100">
+              <a href="{% static 'static\assets\img2\portfolio\0594f8994c77ecbeedbbe0c37eb3e374.jpg' %}" data-gallery="portfolio-gallery-app" class="glightbox">
+                <img src="{% static 'static\assets\img2\portfolio\0594f8994c77ecbeedbbe0c37eb3e374.jpg' %}" class="img-fluid" alt="Drone Education Material">
+              </a>
+              <div class="portfolio-info">
+                <h4><a href="portfoliodetails" title="More Details">Drone Education for Users</a></h4>
+                <p>Educational resources to help customers learn how to use drone delivery services.</p>
+              </div>
+            </div>
+          </div><!-- End Portfolio Item -->
+  
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            <div class="portfolio-content h-100">
+              <a href="{% static 'static\assets\img2\portfolio\2a1b199714e548265a273dec42caac5b.jpg' %}" data-gallery="portfolio-gallery-app" class="glightbox">
+                <img src="{% static 'static\assets\img2\portfolio\2a1b199714e548265a273dec42caac5b.jpg' %}" class="img-fluid" alt="Duma Drones User Interface">
+              </a>
+              <div class="portfolio-info">
+                <h4><a href="portfoliodetails" title="More Details">Easy-to-Use Interface</a></h4>
+                <p>A user-friendly interface that makes it easy to order deliveries through our app.</p>
+              </div>
+            </div>
+          </div><!-- End Portfolio Item -->
+  
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+            <div class="portfolio-content h-100">
+              <a href="{% static 'static\assets\img2\portfolio\9ffb06249e11e2d2a3c8080594339288.jpg' %}" data-gallery="portfolio-gallery-app" class="glightbox">
+                <img src="{% static 'static\assets\img2\portfolio\9ffb06249e11e2d2a3c8080594339288.jpg' %}" class="img-fluid" alt="Food Delivery Drone">
+              </a>
+              <div class="portfolio-info">
+                <h4><a href="portfoliodetails" title="More Details">Food Delivery</a></h4>
+                <p>Get hot meals delivered right to your doorstep with Duma Drones.</p>
+              </div>
+            </div>
+          </div><!-- End Portfolio Item -->
+  
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+            <div class="portfolio-content h-100">
+              <a href="{% static 'static\assets\img2\portfolio\0bc210ca12e7eaf53137d94dde8c8d93.jpg' %}" data-gallery="portfolio-gallery-app" class="glightbox">
+                <img src="{% static 'static\assets\img2\portfolio\0bc210ca12e7eaf53137d94dde8c8d93.jpg' %}" class="img-fluid" alt="Drone Branding Designs">
+              </a>
+              <div class="portfolio-info">
+                <h4><a href="portfoliodetails" title="More Details">Eco-Sustainability</a></h4>
+                <p>contributing to sustainability and reducing carbon emissions by the year 2030.</p>
+              </div>
+            </div>
+          </div><!-- End Portfolio Item -->
+  
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+            <div class="portfolio-content h-100">
+              <a href="{% static 'static\assets\img2\portfolio\a9ae255db27f617ab8d124ff4e19abf7.jpg' %}" data-gallery="portfolio-gallery-app" class="glightbox">
+                <img src="{% static 'static\assets\img2\portfolio\a9ae255db27f617ab8d124ff4e19abf7.jpg' %}" class="img-fluid" alt="Drone User Guides">
+              </a>
+              <div class="portfolio-info">
+                <h4><a href="portfoliodetails" title="More Details">User Guides</a></h4>
+                <p>Comprehensive guides to help users get the most out of Duma Drone services.</p>
+              </div>
+            </div>
+          </div><!-- End Portfolio Item -->
+  
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+            <div class="portfolio-content h-100">
+              <a href="{% static 'static\assets\img2\portfolio\6d9861699033068de7cbe894c51f4284.jpg' %}" data-gallery="portfolio-gallery-app" class="glightbox">
+                <img src="{% static 'static\assets\img2\portfolio\6d9861699033068de7cbe894c51f4284.jpg' %}" class="img-fluid" alt="Order Tracking App">
+              </a>
+              <div class="portfolio-info">
+                <h4><a href="portfoliodetails" title="More Details">Order Tracking</a></h4>
+                <p>Track your drone deliveries in real-time with our state-of-the-art tracking system.</p>
+              </div>
+            </div>
+          </div><!-- End Portfolio Item -->
+  
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+            <div class="portfolio-content h-100">
+              <a href="{% static 'static\assets\img2\portfolio\5b8903b08a7f99ae6e671a82aa35db8a.jpg' %}" data-gallery="portfolio-gallery-app" class="glightbox">
+                <img src="{% static 'static\assets\img2\portfolio\5b8903b08a7f99ae6e671a82aa35db8a.jpg' %}" class="img-fluid" alt="Emergency Drone Services">
+              </a>
+              <div class="portfolio-info">
+                <h4><a href="portfoliodetails" title="More Details">Emergency Services</a></h4>
+                <p>Rapid response in case of emergencies with our drone-based delivery system.</p>
+              </div>
+            </div>
+          </div><!-- End Portfolio Item -->
+  
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding">
+            <div class="portfolio-content h-100">
+              <a href="{% static 'static\assets\img2\portfolio\a27473243c20684ae790ac237438c6d3.jpg' %}" data-gallery="portfolio-gallery-app" class="glightbox">
+                <img src="{% static 'static\assets\img2\portfolio\a27473243c20684ae790ac237438c6d3.jpg' %}" class="img-fluid" alt="Duma Drones Branding">
+              </a>
+              <div class="portfolio-info">
+                <h4><a href="portfoliodetails" title="More Details">Drone Delivery Innovations</a></h4>
+                <p>Building new features, technologies, and drone innovations.</p>
+              </div>
+            </div>
+          </div><!-- End Portfolio Item -->
+  
+          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+            <div class="portfolio-content h-100">
+              <a href="{% static 'static\assets\img2\portfolio\fa06e3cfc2a836f593ae848f143574ed.jpg' %}" data-gallery="portfolio-gallery-app" class="glightbox">
+                <img src="{% static 'static\assets\img2\portfolio\fa06e3cfc2a836f593ae848f143574ed.jpg' %}" class="img-fluid" alt="Customer Education">
+              </a>
+              <div class="portfolio-info">
+                <h4><a href="portfoliodetails" title="More Details">Customer Education</a></h4>
+                <p>Helping customers understand the benefits and ease of using Duma Drones.</p>
+              </div>
+            </div>
+          </div><!-- End Portfolio Item -->
+  
+        </div><!-- End Portfolio Container -->
+  
+      </div>
+  
+    </div>
+  
+  </section><!-- /Portfolio Section -->
+  
+  
+{%endblock%}

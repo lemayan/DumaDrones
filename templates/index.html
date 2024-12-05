@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Index</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  {%load static%}
+  <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Impact
+  * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header fixed-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">dumadrones@gmail.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+254 715197671</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="https://web.facebook.com/profile.php?id=100081665997727" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/__lemayan__/" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/dennis-leleina-500a01201/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="{% url 'index' %}" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="assets/img/logo.png" alt="">
+          <h1 class="sitename">Duma Drones</h1>
+          <span>.</span>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul style="list-style: none; padding: 0; display: flex; gap: 20px;">
+            <li><a href="{% url 'index' %}" class="nav-link active">Home</a></li>
+            <li><a href="{% url 'about' %}" class="nav-link">About</a></li>
+            <li><a href="{% url 'services' %}" class="nav-link">Services</a></li>
+            <li><a href="{% url 'portfolio' %}" class="nav-link">Portfolio</a></li>
+            <li><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
+            <li><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+          </ul>
+        
+          <style>
+            .navmenu .nav-link {
+              transition: all 0.3s ease;
+              color: #fff;
+              text-decoration: none;
+              position: relative;
+            }
+        
+            .navmenu .nav-link:hover {
+              text-transform: uppercase;
+              color: #fff;
+            }
+        
+            .navmenu .nav-link::after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 2px;
+              background-color: #fff;
+              opacity: 0;
+              transition: opacity 0.3s;
+            }
+        
+            .navmenu .nav-link:hover::after {
+              opacity: 1;
+            }
+          </style>
+        
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+        
+        
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section accent-background">
+
+      <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-5 justify-content-between">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+            <h2><span>Welcome to </span><span class="accent">DumaDrones</span></h2>
+            <p>Your one-stop solution for all home essentials, delivered with speed and precision. Whether it’s your favorite meals, everyday groceries, or critical care packages, DumaDrones ensures your necessities arrive safely, directly to your doorstep. Revolutionizing convenience, one flight at a time.</p>
+            <div class="d-flex">
+                <a href="#about" class="btn-get-started btn btn-primary">Get Started</a>
+              <a href="https://youtu.be/1ucIm6g9llg?si=KcrlQuEPtA8FT9lS" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+            </div>
+          </div>
+          <div class="col-lg-5 order-1 order-lg-2 d-flex justify-content-center align-items-center p-3" style="background-color: #008080; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);">
+            <img src="{% static 'assets/img2/Designer.jpeg' %}" class="img-fluid rounded" alt="Designer">
+          </div>
+          
+          
+        </div>
+      </div>
+
+      <div class="icon-boxes position-relative" data-aos="fade-up" data-aos-delay="200">
+        <div class="container position-relative">
+          <div class="row gy-4 mt-5">
+      
+            <div class="col-xl-3 col-md-6">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-box-seam"></i></div>
+                <h4 class="title"><a href="" class="stretched-link">Fast Deliveries</a></h4>
+                <p>Get your essentials delivered in record time with our fleet of reliable drones.</p>
+              </div>
+            </div><!--End Icon Box -->
+      
+            <div class="col-xl-3 col-md-6">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-heart-pulse"></i></div>
+                <h4 class="title"><a href="" class="stretched-link">Medical Supplies</a></h4>
+                <p>Access life-saving medicines and healthcare kits with just a few clicks.</p>
+              </div>
+            </div><!--End Icon Box -->
+      
+            <div class="col-xl-3 col-md-6">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-basket"></i></div>
+                <h4 class="title"><a href="" class="stretched-link">Grocery Delivery</a></h4>
+                <p>Fresh groceries and daily essentials delivered straight to your doorstep.</p>
+              </div>
+            </div><!--End Icon Box -->
+      
+            <div class="col-xl-3 col-md-6">
+              <div class="icon-box">
+                <div class="icon"><i class="bi bi-lightning"></i></div>
+                <h4 class="title"><a href="" class="stretched-link">Smart Technology</a></h4>
+                <p>Experience cutting-edge drone technology designed for efficiency and reliability.</p>
+              </div>
+            </div><!--End Icon Box -->
+      
+          </div>
+        </div>
+      </div>
+      
+    </section><!-- /Hero Section -->
+
+  
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section">
+
+      <div class="container">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 2,
+                  "spaceBetween": 40
+                },
+                "480": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 60
+                },
+                "640": {
+                  "slidesPerView": 4,
+                  "spaceBetween": 80
+                },
+                "992": {
+                  "slidesPerView": 6,
+                  "spaceBetween": 120
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-1.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-2.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-3.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-4.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-5.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-6.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-7.png' %}" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="{% static 'assets/img/clients/client-8.png' %}" class="img-fluid" alt=""></div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Clients Section -->
+
+   <!-- Stats Section -->
+<section id="stats" class="stats section">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4 align-items-center">
+
+      <div class="col-lg-5">
+        <img src="{% static 'assets/img/stats-img.svg' %}" alt="Drone Service Stats" class="img-fluid">
+      </div>
+
+      <div class="col-lg-7">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+            <div class="stats-item d-flex" style="align-items: center;">
+              <i class="bi bi-emoji-smile flex-shrink-0" style="font-size: 2rem; color: #28a745;"></i>
+              <div style="margin-left: 15px;">
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter" style="font-size: 2.5rem; font-weight: 700; color: #333;"></span>
+                <p style="font-size: 1.1rem; color: #555; margin-top: 10px;"><strong>Happy Clients</strong> <span style="font-weight: 500;">delivering satisfaction with every flight</span></p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-6">
+            <div class="stats-item d-flex" style="align-items: center;">
+              <i class="bi bi-box-seam flex-shrink-0" style="font-size: 2rem; color: #ff6600;"></i>
+              <div style="margin-left: 15px;">
+                <span data-purecounter-start="0" data-purecounter-end="450" data-purecounter-duration="1" class="purecounter" style="font-size: 2.5rem; font-weight: 700; color: #333;"></span>
+                <p style="font-size: 1.1rem; color: #555; margin-top: 10px;"><strong>Packages Delivered</strong> <span style="font-weight: 500;">fast, efficient, and reliable</span></p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-6">
+            <div class="stats-item d-flex" style="align-items: center;">
+              <i class="bi bi-patch-check flex-shrink-0" style="font-size: 2rem; color: #0066cc;"></i>
+              <div style="margin-left: 15px;">
+                <span data-purecounter-start="0" data-purecounter-end="75" data-purecounter-duration="1" class="purecounter" style="font-size: 2.5rem; font-weight: 700; color: #333;"></span>
+                <p style="font-size: 1.1rem; color: #555; margin-top: 10px;"><strong>Drone Flights</strong> <span style="font-weight: 500;">completed with precision and speed</span></p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-6">
+            <div class="stats-item d-flex" style="align-items: center;">
+              <i class="bi bi-house-door flex-shrink-0" style="font-size: 2rem; color: #f44336;"></i>
+              <div style="margin-left: 15px;">
+                <span data-purecounter-start="0" data-purecounter-end="118" data-purecounter-duration="1" class="purecounter" style="font-size: 2.5rem; font-weight: 700; color: #333;"></span>
+                <p style="font-size: 1.1rem; color: #555; margin-top: 10px;"><strong>Homes Served</strong> <span style="font-weight: 500;">delivering essentials to your doorstep</span></p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Stats Section -->
+
+   <!-- Call To Action Section -->
+<section id="call-to-action" class="call-to-action section dark-background">
+
+  <div class="container">
+    <img src="{% static 'assets\img2\a-drone-carrying-a-package-ready-for-delivery-photo.jpg' %}" alt="Drone Delivery in Action" class="img-fluid rounded-4">
+    <div class="content row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+      <div class="col-xl-10">
+        <div class="text-center">
+          <a href="https://youtu.be/1ucIm6g9llg?si=KcrlQuEPtA8FT9lS" class="glightbox play-btn" style="background-color: #ff6600; padding: 15px; border-radius: 50%; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);"></a>
+          <h3 style="font-size: 2.5rem; color: #fff; font-weight: 700; margin-top: 20px;">Ready to Experience the Future of Delivery?</h3>
+          <p style="font-size: 1.15rem; color: #ddd; line-height: 1.8; margin-top: 10px;">Join the revolution in home delivery with Duma Drones. From food to medical supplies, we deliver the essentials right to your doorstep with speed, precision, and environmental consciousness.</p>
+          <a class="cta-btn" href="#" style="font-size: 1.2rem; background-color: #28a745; color: #fff; padding: 15px 30px; border-radius: 30px; text-decoration: none; margin-top: 20px;">Get Started Today</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section><!-- /Call To Action Section -->
+
+ 
+    <!-- Testimonials Section -->
+<section id="testimonials" class="testimonials section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>What Our Clients Say</h2>
+    <p>Our clients love the convenience, speed, and reliability of our drone delivery services. Here’s what they have to say:</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="swiper init-swiper">
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": "auto",
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          },
+          "breakpoints": {
+            "320": {
+              "slidesPerView": 1,
+              "spaceBetween": 40
+            },
+            "1200": {
+              "slidesPerView": 3,
+              "spaceBetween": 10
+            }
+          }
+        }
+      </script>
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="{% static 'assets\img2\4d3ed4d30f68a4e52142148f5b5c0659.jpg' %}" class="testimonial-img" alt="">
+            <h3>Mary Kamau</h3>
+            <h4>Kiosk Owner</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>"Duma Drones has been a game-changer for our business. Their fast, reliable deliveries have helped us meet customer demands efficiently and without delays."</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="{% static 'assets\img2\6e381a81b0e8bf7aa7f16dc4d00e25e6.jpg' %}" class="testimonial-img" alt="">
+            <h3>Sarah Wambui</h3>
+            <h4>Healthcare Professional</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>"I can't thank Duma Drones enough for their fast medical deliveries. They’ve helped us get crucial supplies to patients in need during emergencies."</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="{% static 'assets\img2\41c87e53287e0bb2f9af611a351b8eb1.jpg' %}" class="testimonial-img" alt="">
+            <h3>June Mutten</h3>
+            <h4>Retail Store Manager</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>"We use Duma Drones for same-day deliveries. The process is seamless, and our customers are always impressed with the speed and reliability of the service."</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="{% static 'assets/img2/74fc5f9c73880ff75b301babec974cf4.jpg' %}" class="testimonial-img" alt="">
+            <h3>Martin Lesokoyo</h3>
+            <h4>Entrepreneur</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>"The convenience of having Duma Drones deliver my essential products to customers is unmatched. The service is top-notch, and my customers love it!"</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="{% static 'assets/img2/d9bc1abeb5be60f7e6075790946dfc01.jpg' %}" class="testimonial-img" alt="">
+            <h3>Martha Ogendi</h3>
+            <h4>Freelancer</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>"Duma Drones has made it possible for me to receive important supplies in no time. Their quick and reliable service has saved me countless hours."</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+
+</section><!-- /Testimonials Section -->
+
+  
+  <!-- Team Section -->
+<section id="team" class="team section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Our Team</h2>
+    <p>Meet the dedicated professionals behind Duma Drones, who make fast, reliable drone deliveries possible for essential needs.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <!-- Drone Operations Manager -->
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+        <div class="member">
+            <img src="{% static 'static\assets\img2\fc57aecc58373cf858b8a22f565b8512.jpg' %}" class="img-fluid" alt="">
+          <h4>Ann Mwangi</h4>
+          <span>Drone Operations Manager</span>
+          <div class="social">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div><!-- End Team Member -->
+
+      <!-- Marketing Specialist -->
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+        <div class="member">
+            <img src="{% static 'static\assets\img2\92bf10d5a7ab2a46f8006468b16780ce.jpg' %}" class="img-fluid" alt="">
+          <h4>Amy Wambui</h4>
+          <span>Marketing Specialist</span>
+          <div class="social">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div><!-- End Team Member -->
+
+      <!-- Technical Developer -->
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+        <div class="member">
+            <img src="{% static 'static\assets\img2\d3b0bcf3dcd5207114eb889ce7f5fced.jpg' %}" class="img-fluid" alt="">
+          <h4>Jemimah Thiongo</h4>
+          <span>Technical Developer</span>
+          <div class="social">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div><!-- End Team Member -->
+
+      <!-- Logistics Manager -->
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+        <div class="member">
+            <img src="{% static 'static\assets\img2\d7da2c554d883c911f74aaf6aa52d29e.jpg' %}" class="img-fluid" alt="">
+          <h4>Jesse Labaru</h4>
+          <span>Logistics Manager</span>
+          <div class="social">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div><!-- End Team Member -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Team Section -->
+
+ <!-- Pricing Section -->
+<section id="pricing" class="pricing section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Pricing</h2>
+    <p>Choose the perfect plan that suits your needs, all designed to ensure timely and reliable drone deliveries for essentials.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="zoom-in" data-aos-delay="100">
+
+    <div class="row g-4">
+
+      <!-- Essential Drop -->
+      <div class="col-lg-4">
+        <div class="pricing-item">
+          <h3>Essential Drop</h3>
+          <div class="icon">
+            <i class="bi bi-box"></i>
+          </div>
+          <h4><sup>KSh</sup>2000<span> / month</span></h4>
+          <ul>
+            <li><i class="bi bi-check"></i> <span>Basic drone delivery options</span></li>
+            <li><i class="bi bi-check"></i> <span>Limited service area</span></li>
+            <li><i class="bi bi-check"></i> <span>Single delivery per month</span></li>
+            <li class="na"><i class="bi bi-x"></i> <span>Priority delivery</span></li>
+            <li class="na"><i class="bi bi-x"></i> <span>Multiple deliveries per month</span></li>
+          </ul>
+          <div class="text-center"><a href="#" class="buy-btn">Get Started</a></div>
+        </div>
+      </div><!-- End Pricing Item -->
+
+      <!-- Priority Glide -->
+      <div class="col-lg-4">
+        <div class="pricing-item featured">
+          <h3>Priority Glide</h3>
+          <div class="icon">
+            <i class="bi bi-rocket"></i>
+          </div>
+
+          <h4><sup>KSh</sup>5,000<span> / month</span></h4>
+          <ul>
+            <li><i class="bi bi-check"></i> <span>Advanced drone delivery features</span></li>
+            <li><i class="bi bi-check"></i> <span>Priority support</span></li>
+            <li><i class="bi bi-check"></i> <span>Expanded service area</span></li>
+            <li><i class="bi bi-check"></i> <span>Up to 5 deliveries per month</span></li>
+            <li><i class="bi bi-check"></i> <span>Scheduled deliveries</span></li>
+          </ul>
+          <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+        </div>
+      </div><!-- End Pricing Item -->
+
+      <!-- Elite Express -->
+      <div class="col-lg-4">
+        <div class="pricing-item">
+          <h3>Elite Express</h3>
+          <div class="icon">
+            <i class="bi bi-send"></i>
+          </div>
+          <h4><sup>KSh</sup>8,000<span> / month</span></h4>
+          <ul>
+            <li><i class="bi bi-check"></i> <span>Unlimited drone deliveries</span></li>
+            <li><i class="bi bi-check"></i> <span>Access to priority drones</span></li>
+            <li><i class="bi bi-check"></i> <span>Custom delivery scheduling</span></li>
+            <li><i class="bi bi-check"></i> <span>Drone tracking and analytics</span></li>
+            <li><i class="bi bi-check"></i> <span>Dedicated support</span></li>
+          </ul>
+          <div class="text-center"><a href="#" class="buy-btn">Buy Now</a></div>
+        </div>
+      </div><!-- End Pricing Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Pricing Section -->
+
+ <!-- Faq Section -->
+<section id="faq" class="faq section">
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <!-- FAQ Intro -->
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="content px-xl-5">
+          <h3><span>Frequently Asked </span><strong>Questions</strong></h3>
+          <p>
+            Have questions about our drone delivery service? Find answers to some of the most common inquiries below.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ List -->
+      <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+
+        <div class="faq-container">
+          <!-- Question 1 -->
+          <div class="faq-item faq-active">
+            <h3><span class="num">1.</span> <span>How does your drone delivery system work?</span></h3>
+            <div class="faq-content">
+              <p>Our drones are equipped with GPS tracking and real-time communication systems, allowing them to deliver packages directly to your location with utmost precision. Simply place an order and select the drone delivery option.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item -->
+
+          <!-- Question 2 -->
+          <div class="faq-item">
+            <h3><span class="num">2.</span> <span>What type of packages can I have delivered?</span></h3>
+            <div class="faq-content">
+              <p>We deliver a wide range of items, including food, medical supplies, and other essential items. Our drones can carry packages up to a certain weight limit for a safe and efficient delivery experience.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item -->
+
+          <!-- Question 3 -->
+          <div class="faq-item">
+            <h3><span class="num">3.</span> <span>Is drone delivery available in all areas?</span></h3>
+            <div class="faq-content">
+              <p>Drone delivery is available in select urban and suburban areas. You can check availability for your location through our app or website before placing an order.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item -->
+
+          <!-- Question 4 -->
+          <div class="faq-item">
+            <h3><span class="num">4.</span> <span>How long does delivery take?</span></h3>
+            <div class="faq-content">
+              <p>Delivery times vary based on your location and package type. Most deliveries are completed within 30 to 60 minutes from the time the order is placed, ensuring quick service.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item -->
+
+          <!-- Question 5 -->
+          <div class="faq-item">
+            <h3><span class="num">5.</span> <span>What happens if the weather is bad?</span></h3>
+            <div class="faq-content">
+              <p>Our drones are equipped to handle mild weather conditions. However, in case of extreme weather such as heavy rain or strong winds, deliveries may be delayed for safety reasons. You will be notified of any changes to your delivery.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item -->
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- /Faq Section -->
+
+   <!-- Recent Posts Section -->
+<section id="recent-posts" class="recent-posts section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Recent Blog Posts</h2>
+    <p>Stay updated with the latest news, tips, and stories about our drone delivery service.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <!-- Post 1 -->
+      <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <article>
+
+          <div class="post-img">
+            <img src="{% static 'static\assets\img2\Blogs\8ee0600cce110a8b54126283322d952b.jpg' %}" alt="Blog Post 1" class="img-fluid">
+          </div>
+
+          <p class="post-category">Drone Technology</p>
+
+          <h2 class="title">
+            <a href="blogdetails">How Drones Are Revolutionizing Delivery Services</a>
+          </h2>
+
+          <div class="d-flex align-items-center">
+            <img src="{% static 'static\assets\img2\Blogs\27bddb40af919de9d61a024c015cd142.jpg' %}" alt="Author" class="img-fluid post-author-img flex-shrink-0">
+            <div class="post-meta">
+              <p class="post-author">Alex Letinina</p>
+              <p class="post-date">
+                <time datetime="2024-12-04">Dec 4, 2024</time>
+              </p>
+            </div>
+          </div>
+
+        </article>
+      </div><!-- End post list item -->
+
+      <!-- Post 2 -->
+      <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <article>
+
+          <div class="post-img">
+            <img src="{% static 'static\assets\img2\Blogs\cbbb76fa1ce0eeaa19ca27c4a7c697bc.jpg' %}" alt="Blog Post 2" class="img-fluid">
+          </div>
+
+          <p class="post-category">Service Expansion</p>
+
+          <h2 class="title">
+            <a href="blogdetails">Expanding Drone Delivery: New Areas Covered</a>
+          </h2>
+
+          <div class="d-flex align-items-center">
+            <img src="{% static 'static/assets/img2/Blogs/74293e49a2a0a03b6af63bff9b34ba48.jpg' %}" alt="Author" class="img-fluid post-author-img flex-shrink-0">
+            <div class="post-meta">
+              <p class="post-author">Miriam Njeri</p>
+              <p class="post-date">
+                <time datetime="2024-12-02">Dec 2, 2024</time>
+              </p>
+            </div>
+          </div>
+
+        </article>
+      </div><!-- End post list item -->
+
+      <!-- Post 3 -->
+      <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <article>
+
+          <div class="post-img">
+            <img src="{% static 'static\assets\img2\Blogs\22b45d2329bd18e2fa1f0a1a1af82804.jpg' %}" alt="Blog Post 3" class="img-fluid">
+          </div>
+
+          <p class="post-category">Safety</p>
+
+          <h2 class="title">
+            <a href="blogdetails">Ensuring Safe Drone Deliveries: Our Approach</a>
+          </h2>
+
+          <div class="d-flex align-items-center">
+            <img src="{% static 'static\assets\img2\Blogs\b529005ea3521b4750b749b83f13c8ff.jpg' %}" alt="Author" class="img-fluid post-author-img flex-shrink-0">
+            <div class="post-meta">
+              <p class="post-author">Kevin Otieno</p>
+              <p class="post-date">
+                <time datetime="2024-11-30">Nov 30, 2024</time>
+              </p>
+            </div>
+          </div>
+
+        </article>
+      </div><!-- End post list item -->
+
+    </div><!-- End recent posts list -->
+
+  </div>
+
+</section><!-- /Recent Posts Section -->
+
+<!-- Contact Section -->
+<section id="contact" class="contact section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Get in touch with us for more information or any inquiries you may have.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gx-lg-0 gy-4">
+
+      <div class="col-lg-4">
+        <div class="info-container d-flex flex-column align-items-center justify-content-center">
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <i class="bi bi-geo-alt flex-shrink-0"></i>
+            <div>
+              <h3>Address</h3>
+              <p>Kenyatta Avenue, Nairobi , KN 20600</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <i class="bi bi-telephone flex-shrink-0"></i>
+            <div>
+              <h3>Call Us</h3>
+              <p>+254 715197671</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <i class="bi bi-envelope flex-shrink-0"></i>
+            <div>
+              <h3>Email Us</h3>
+              <p>dumadrones@gmail.com</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+            <i class="bi bi-clock flex-shrink-0"></i>
+            <div>
+              <h3>Open Hours:</h3>
+              <p>Mon-Sat: 11AM - 11PM</p>
+            </div>
+          </div><!-- End Info Item -->
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-8">
+        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade" data-aos-delay="100">
+          <div class="row gy-4">
+
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+            </div>
+
+            <div class="col-md-6">
+              <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+            </div>
+
+            <div class="col-md-12">
+              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+            </div>
+
+            <div class="col-md-12">
+              <textarea class="form-control" name="message" rows="8" placeholder="Message" required=""></textarea>
+            </div>
+
+            <div class="col-md-12 text-center">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+
+              <button type="submit">Send Message</button>
+            </div>
+
+          </div>
+        </form>
+      </div><!-- End Contact Form -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Contact Section -->
+
+
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Duma Drones</span>
+          </a>
+          <p>Delivering necessities directly to your door with the help of modern drone technology. Ensuring fast, reliable, and safe deliveries to make life easier.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="https://web.facebook.com/profile.php?id=100081665997727" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/__lemayan__/" class="instagram"><i class="bi bi-instagram"></i></a>
+           <a href="https://www.linkedin.com/in/dennis-leleina-500a01201/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+  
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Drone Delivery</a></li>
+            <li><a href="#">Medical Supplies</a></li>
+            <li><a href="#">Food Delivery</a></li>
+            <li><a href="#">Emergency Services</a></li>
+            <li><a href="#">Logistics Solutions</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>Kenyatta Avenue</p>
+          <p>Nairobi, KN 20600</p>
+          <p>Kenya</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+254 715197671</span></p>
+          <p><strong>Email:</strong> <span>dumadrones@gmail.com</span></p>
+        </div>
+  
+        <div class="col-lg-12">
+          <!-- Google Map iframe for Kenyatta Avenue -->
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19877.422947118332!2d36.82298476756973!3d-1.2920659981717663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f9b5041f44c87%3A0x62b7a9d7b5312957!2sKenyatta%20Ave%2C%20Nairobi%2C%20Kenya!5e0!3m2!1sen!2sus!4v1601322079872!5m2!1sen!2sus" width="100%" height="450" frameborder="0" style="border:0; width: 100%;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Duma Drones</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by <a href="">Lemayan Leleina</a>
+      </div>
+    </div>
+  
+  </footer>
+  
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

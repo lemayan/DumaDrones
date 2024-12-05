@@ -1,0 +1,53 @@
+{%extends 'starter-page.html'%}
+{%load static%}
+{%block body%}
+
+
+      <!-- About Section -->
+<section id="about" class="about section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up" style="text-align: center;">
+
+
+      <h2 style="font-size: 2.5rem; font-weight: 700; color: #333;">Welcome to Duma Drones</h2>
+
+      
+      <p style="font-size: 1.2rem; color: #555; line-height: 1.6; font-style: italic;">Delivering the future of convenience, one flight at a time.</p>
+    </div><!-- End Section Title -->
+  
+    <div class="container">
+  
+      <div class="row gy-4">
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          <h3 style="font-size: 1.8rem; font-weight: 600; color: #333;">Redefining Delivery, Powered by Innovation</h3>
+          <img src="{% static 'assets\img2\Designer (1).jpeg' %}" class="img-fluid rounded-4 mb-4" alt="Duma Drone Delivery" style="border-radius: 15px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+          <p style="font-size: 1.1rem; color: #555; line-height: 1.8;">At Duma Drones, we are revolutionizing the way essentials are delivered. Whether it’s your favorite meal, a week’s groceries, or life-saving medical supplies, our drones bring them to your doorstep with speed, precision, and reliability.</p>
+          <p style="font-size: 1.1rem; color: #555; line-height: 1.8;">Imagine receiving your order within minutes, avoiding traffic, and experiencing hassle-free deliveries—our advanced drone technology makes it all possible. By using environmentally friendly drones, we’re not just changing delivery—we’re creating a sustainable future for everyone.</p>
+        </div>
+        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
+          <div class="content ps-0 ps-lg-5">
+            <p class="fst-italic" style="font-size: 1.15rem; font-style: italic; color: #333; line-height: 1.8;">
+              Convenience at your doorstep—fast, reliable, and tech-driven, with a focus on what matters most to you.
+            </p>
+            <ul style="font-size: 1.1rem; color: #555; line-height: 1.6;">
+              <li><i class="bi bi-check-circle-fill" style="color: #28a745;"></i> <span>Instant delivery for food, groceries, and more—whenever you need it.</span></li>
+              <li><i class="bi bi-check-circle-fill" style="color: #28a745;"></i> <span>Efficient, eco-friendly drone technology for a sustainable future.</span></li>
+              <li><i class="bi bi-check-circle-fill" style="color: #28a745;"></i> <span>Access to critical supplies and emergency packages delivered quickly.</span></li>
+            </ul>
+            <p style="font-size: 1.1rem; color: #555; line-height: 1.8;">
+              Duma Drones empowers you to live smarter, safer, and more efficiently by providing an easy way to get what you need, when you need it. Whether it's a last-minute food order or an urgent medical delivery, we’ve got you covered.
+            </p>
+  
+            <div class="position-relative mt-4">
+              <img src="{% static 'assets\img2\youtube-icon-6953530_1280.webp' %}" class="img-fluid rounded-4" alt="Drone Delivery in Action" style="border-radius: 15px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1);">
+              <a href="https://youtu.be/Hhp11I-vGHA?si=TeLcFB88RjZd6U7y" class="glightbox pulsating-play-btn"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  
+  </section><!-- /About Section -->
+{%endblock%}

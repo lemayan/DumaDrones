@@ -1,0 +1,89 @@
+{%extends 'starter-page.html'%}
+{%load static%}
+{%block body%}
+     <!-- Services Section -->
+<section id="services" class="services section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Our Services</h2>
+      <p>We deliver essential goods—quickly, safely, and efficiently—straight to your doorstep.</p>
+    </div><!-- End Section Title -->
+  
+    <div class="container">
+  
+      <div class="row gy-4">
+  
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="bi bi-box-seam"></i>
+            </div>
+            <h3>Fast Delivery</h3>
+            <p>Need something urgently? Our drones provide fast and efficient delivery of essential items, from groceries to medical kits.</p>
+            <a href="{% url 'servicedetails' %}" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div><!-- End Service Item -->
+  
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="bi bi-briefcase"></i>
+            </div>
+            <h3>Commercial Services</h3>
+            <p>Our drones aren't just for homes; they’re perfect for businesses that need quick inventory restocks or urgent deliveries to customers.</p>
+            <a href="{% url 'servicedetails' %}" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div><!-- End Service Item -->
+  
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="bi bi-airplane-engines"></i>
+            </div>
+            <h3>Medical Delivery</h3>
+            <p>In emergencies, every second counts. We deliver medical supplies like medicines, care kits, and more with precision and speed.</p>
+            <a href="{% url 'servicedetails' %}" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div><!-- End Service Item -->
+  
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="bi bi-shield-lock"></i>
+            </div>
+            <h3>Safe & Secure</h3>
+            <p>Your privacy and the security of your deliveries are our top priority. We use the latest technology to ensure all items are delivered securely.</p>
+            <a href="{% url 'servicedetails' %}" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div><!-- End Service Item -->
+  
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="bi bi-geo-alt"></i>
+            </div>
+            <h3>Nationwide Coverage</h3>
+            <p>No matter where you are, we’ve got you covered. Our drones are ready to fly anywhere in the country, bringing essentials to you, fast.</p>
+            <a href="{% url 'servicedetails' %}" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div><!-- End Service Item -->
+  
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="service-item position-relative">
+            <div class="icon">
+              <i class="bi bi-clock"></i>
+            </div>
+            <h3>On-Time Service</h3>
+            <p>We understand the importance of timing. Whether it’s food or medicine, we ensure your deliveries arrive exactly when you need them.</p>
+            <a href="{% url 'servicedetails' %}" class="readmore stretched-link">Read more <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div><!-- End Service Item -->
+  
+      </div>
+  
+    </div>
+  
+  </section><!-- /Services Section -->
+  
+{%endblock%}

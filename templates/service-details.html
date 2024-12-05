@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Service Details</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  {%load static%}
+  <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Impact
+  * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="service-details-page">
+
+  <header id="header" class="header fixed-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="https://web.facebook.com/profile.php?id=100081665997727" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/__lemayan__/" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/dennis-leleina-500a01201/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename">Duma Drones</h1>
+          <span>.</span>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul style="list-style: none; padding: 0; display: flex; gap: 20px;">
+            <li><a href="{% url 'index' %}" class="nav-link active">Home</a></li>
+            <li><a href="{% url 'about' %}" class="nav-link">About</a></li>
+            <li><a href="{% url 'services' %}" class="nav-link">Services</a></li>
+            <li><a href="{% url 'portfolio' %}" class="nav-link">Portfolio</a></li>
+            <li><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
+            <li><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+          </ul>
+        
+          <style>
+            .navmenu .nav-link {
+              transition: all 0.3s ease;
+              color: #fff;
+              text-decoration: none;
+              position: relative;
+            }
+        
+            .navmenu .nav-link:hover {
+              text-transform: uppercase;
+              color: #fff;
+            }
+        
+            .navmenu .nav-link::after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 2px;
+              background-color: #fff;
+              opacity: 0;
+              transition: opacity 0.3s;
+            }
+        
+            .navmenu .nav-link:hover::after {
+              opacity: 1;
+            }
+          </style>
+        
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+<!-- Page Title -->
+<div class="page-title">
+  <div class="heading">
+    <div class="container">
+      <div class="row d-flex justify-content-center text-center">
+        <div class="col-lg-8">
+          <h1>Welcome to Duma Drones</h1>
+          <p class="mb-0">Your one-stop solution for delivering home essentials with precision and speed. From everyday groceries to essential care packages, DumaDrones brings convenience to your doorstep, revolutionizing delivery one flight at a time.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="breadcrumbs">
+    <div class="container">
+      <ol>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li class="current">DumaDrones Services</li>
+      </ol>
+    </div>
+  </nav>
+</div><!-- End Page Title -->
+
+
+  <!-- Service Details Section -->
+<section id="service-details" class="service-details section">
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="services-list">
+          <a href="#" class="active">On-Demand Delivery</a>
+          <a href="#">Scheduled Delivery Options</a>
+          <a href="#">Bulk Orders Fulfillment</a>
+          <a href="#">Sustainable Solutions</a>
+          <a href="#">Real-Time Tracking</a>
+        </div>
+
+        <h4>Seamless and Efficient Drone Deliveries</h4>
+        <p>Discover the future of delivery with DumaDrones. Combining advanced technology with innovative logistics, we provide quick, reliable, and secure solutions tailored to your needs.</p>
+      </div>
+
+      <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+        <img src="{% static 'static\assets\img2\portfolio\a9ae255db27f617ab8d124ff4e19abf7.jpg' %}" alt="DumaDrones Service" class="img-fluid services-img">
+        <h3>Redefining Delivery with Drone Innovation</h3>
+        <p>
+          At DumaDrones, we’re revolutionizing how goods reach your doorstep. Our cutting-edge drone delivery system ensures fast, efficient, and environmentally conscious solutions for all your delivery needs.
+        </p>
+        <ul>
+          <li><i class="bi bi-check-circle"></i> <span>Ultra-fast delivery to match your busy lifestyle.</span></li>
+          <li><i class="bi bi-check-circle"></i> <span>Customizable schedules for convenience.</span></li>
+          <li><i class="bi bi-check-circle"></i> <span>Eco-friendly technology for a greener planet.</span></li>
+        </ul>
+        <p>
+          Whether you need everyday essentials, urgent deliveries, or bulk shipments, our drones are equipped to deliver with precision and reliability. Let us handle your logistics with a smarter, safer, and more sustainable approach.
+        </p>
+        <p>
+          Join us in shaping the future of delivery services. Experience unparalleled convenience with DumaDrones — your trusted partner in drone-powered logistics.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Service Details Section -->
+
+
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+            <a href="{% url 'index' %}" class="logo d-flex align-items-center"></a>
+            <span class="sitename">Duma Drones</span>
+          </a>
+          <p>Delivering necessities directly to your door with the help of modern drone technology. Ensuring fast, reliable, and safe deliveries to make life easier.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="https://twitter.com/dumadrones"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.facebook.com/dumadrones"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/dumadrones"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/dumadrones"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+  
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Drone Delivery</a></li>
+            <li><a href="#">Medical Supplies</a></li>
+            <li><a href="#">Food Delivery</a></li>
+            <li><a href="#">Emergency Services</a></li>
+            <li><a href="#">Logistics Solutions</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>Kenyatta Avenue</p>
+          <p>Nairobi, KN 20600</p>
+          <p>Kenya</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+254 715197671</span></p>
+          <p><strong>Email:</strong> <span>dumadrones@gmail.com</span></p>
+        </div>
+  
+        <div class="col-lg-12">
+          <!-- Google Map iframe for Kenyatta Avenue -->
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19877.422947118332!2d36.82298476756973!3d-1.2920659981717663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f9b5041f44c87%3A0x62b7a9d7b5312957!2sKenyatta%20Ave%2C%20Nairobi%2C%20Kenya!5e0!3m2!1sen!2sus!4v1601322079872!5m2!1sen!2sus" width="100%" height="450" frameborder="0" style="border:0; width: 100%;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Duma Drones</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by <a href="">Lemayan Leleina</a>
+      </div>
+    </div>
+  
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

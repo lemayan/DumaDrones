@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Blog Details</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  {%load static%}
+  <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}">
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Impact
+  * Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="blog-details-page">
+
+  <header id="header" class="header fixed-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">dumadrones@gmail.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+254 715197671</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="https://web.facebook.com/profile.php?id=100081665997727" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/__lemayan__/" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/dennis-leleina-500a01201/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-cente">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="{% url 'index' %}" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+            <img src="assets/img/logo.png" alt="">
+          <h1 class="sitename">Duma Drones</h1>
+          <span>.</span>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul style="list-style: none; padding: 0; display: flex; gap: 20px;">
+            <li><a href="{% url 'index' %}" class="nav-link active">Home</a></li>
+            <li><a href="{% url 'about' %}" class="nav-link">About</a></li>
+            <li><a href="{% url 'services' %}" class="nav-link">Services</a></li>
+            <li><a href="{% url 'portfolio' %}" class="nav-link">Portfolio</a></li>
+            <li><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
+            <li><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+          </ul>
+        
+          
+        
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+        
+        
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+
+   <!-- Page Title -->
+<div class="page-title py-5">
+  <div class="heading">
+    <div class="container">
+      <div class="row d-flex justify-content-center text-center">
+        <div class="col-lg-8">
+          <h1 class="display-4 text-teal">Drone Delivery Service: Blog Details</h1>
+          <p class="mb-0 text-muted">Explore the future of logistics with our cutting-edge drone technology. In this blog, we delve into the advancements in drone delivery services, offering insights into the speed, efficiency, and eco-friendliness that are revolutionizing the way packages are delivered.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="breadcrumbs mt-3">
+    <div class="container">
+      <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'blog' %}">Blog</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
+      </ol>
+    </div>
+  </nav>
+</div><!-- End Page Title -->
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-8">
+
+          <!-- Blog Details Section -->
+          <section id="blog-details" class="blog-details section">
+            <div class="container">
+
+              <article class="article">
+
+                <div class="post-img">
+                    <img src="{% static 'static\assets\img2\Blogs\8ee0600cce110a8b54126283322d952b.jpg' %}" alt="" class="img-fluid">
+                </div>
+
+                <h2 class="title">How Drones Are Revolutionizing Delivery Services</h2>
+
+                <div class="meta-top">
+                  <ul>
+                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="{% url 'blogdetails' %}">John Doe</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="{% url 'blogdetails' %}"> <time datetime="2024-12-04">Dec 4, 2024</time></a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="{% url 'blogdetails' %}">12 Comments</a></li>
+                  </ul>
+                </div><!-- End meta top -->
+
+                <div class="content">
+                  <p>
+                    Revolutionize your delivery experience with our cutting-edge drone technology. Our system ensures quick, reliable, and secure deliveries, reducing delays and optimizing logistics. Perfect for businesses and individuals looking to stay ahead in the fast-paced world of modern delivery.
+                  </p>
+                
+                  <p>
+                    Our drones are designed for precision and efficiency. They handle various package sizes, navigate complex terrains, and ensure on-time delivery. No more worrying about traffic or delays—our aerial routes ensure seamless transportation.
+                  </p>
+                
+                  <blockquote>
+                    <p>
+                      "The future of delivery is here. With unparalleled speed and reliability, our drone system is transforming how goods reach you."  
+                    </p>
+                  </blockquote>
+                
+                  <p>
+                    Built with safety and performance in mind, our drones are equipped with state-of-the-art navigation and tracking systems. They are designed to handle urban and rural areas alike, offering unparalleled reach and flexibility. Whether you're sending a single package or managing a fleet of deliveries, our system is tailored to meet your needs.
+                  </p>
+                
+                  <h3>Why Choose Our Drone Delivery System?</h3>
+                  <p>
+                    Our innovative platform offers a range of benefits, including:
+                    <ul>
+                      <li>Faster delivery times compared to traditional methods.</li>
+                      <li>Eco-friendly solutions that reduce carbon footprints.</li>
+                      <li>Advanced technology for real-time tracking and updates.</li>
+                    </ul>
+                    Whether you’re running a small business or managing large-scale operations, our drone delivery system is built to scale and adapt to your requirements.
+                  </p>
+                  <img src="{% static 'static\assets\img2\Blogs\2a905a2b6a8d353a951894f0bd5e5fbd.jpg' %}" class="img-fluid" alt="Drone Delivery System">
+                
+                  <h3>How It Works</h3>
+                  <p>
+                    Using our platform is simple and intuitive:
+                    <ol>
+                      <li>Schedule a delivery through our easy-to-use interface.</li>
+                      <li>Track your package in real-time as our drones ensure safe and efficient transport.</li>
+                      <li>Receive notifications upon successful delivery, complete with proof of delivery.</li>
+                    </ol>
+                    Our system prioritizes user convenience, ensuring a seamless experience from start to finish.
+                  </p>
+                  <p>
+                    With our drone delivery system, the future of logistics is at your fingertips. Embrace innovation and elevate your delivery solutions today!
+                  </p>
+                </div>
+                
+
+                </div><!-- End post content -->
+
+                <div class="meta-bottom">
+                  <i class="bi bi-folder"></i>
+                  <ul class="cats">
+                    <li><a href="#">Business</a></li>
+                  </ul>
+
+                  <i class="bi bi-tags"></i>
+                  <ul class="tags">
+                    <li><a href="#">Creative</a></li>
+                    <li><a href="#">Tips</a></li>
+                    <li><a href="#">Marketing</a></li>
+                  </ul>
+                </div><!-- End meta bottom -->
+
+              </article>
+
+            </div>
+          </section><!-- /Blog Details Section -->
+
+         <!-- Drone System Author Section -->
+<section id="drone-author" class="drone-author section">
+
+  <div class="container">
+    <div class="author-container d-flex align-items-center">
+      <img src="{% static 'static\assets\img2\Blogs\74293e49a2a0a03b6af63bff9b34ba48.jpg' %}" class="rounded-circle flex-shrink-0" alt="Author Picture" style="width: 150px; height: 150px;">
+      <div>
+        <h4>Jane Leleina</h4>
+        <div class="social-links">
+          <a href="https://twitter.com/#"><i class="bi bi-twitter"></i></a>
+          <a href="https://facebook.com/#"><i class="bi bi-facebook"></i></a>
+          <a href="https://instagram.com/#"><i class="bi bi-instagram"></i></a>
+          <a href="https://linkedin.com/#"><i class="bi bi-linkedin"></i></a>
+        </div>
+        <p>
+          Lemayan Leleina is the visionary behind our innovative drone delivery system. With a background in information and technology, he combines user-centric design with cutting-edge solutions to redefine logistics. Passionate about leveraging technology for seamless and eco-friendly deliveries, Jane is dedicated to enhancing the user experience one flight at a time.
+        </p>
+      </div>
+    </div>
+  </div>
+
+</section><!-- /Drone System Author Section -->
+
+
+         <!-- Drone Delivery Comments Section -->
+<section id="drone-delivery-comments" class="drone-comments section">
+
+  <div class="container">
+
+    <h4 class="comments-count">8 User Reviews</h4>
+
+    <div id="comment-1" class="comment">
+      <div class="d-flex">
+        <div class="comment-img"><img src="{% static 'assets/img/comments/user1.jpg' %}" alt=""></div>
+        <div>
+          <h5><a href="">Georgia Reader</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+          <time datetime="2024-07-11">07 Nov, 2024</time>
+          <p>
+            The service is incredible! My package was delivered faster than I expected. The tracking feature kept me informed throughout. Definitely a game-changer in delivery logistics.
+          </p>
+        </div>
+      </div>
+    </div><!-- End comment #1 -->
+
+    <div id="comment-2" class="comment">
+      <div class="d-flex">
+        <div class="comment-img"><img src="{% static 'assets/img/comments/user2.jpg' %}" alt=""></div>
+        <div>
+          <h5><a href="">Aron Alvarado</a> <a href="#" class="reply"><i class="bi bi-reply-fill"></i> Reply</a></h5>
+          <time datetime="2024-12-12">12 Dec, 2024</time>
+          <p>
+            Great innovation! The drones handled tough terrain with ease. It's an eco-friendly solution that’s also cost-efficient. Looking forward to more features in the future.
+          </p>
+        </div>
+      </div>
+
+      <div id="comment-reply-1" class="comment comment-reply">
+
+        
+        <div class="col-lg-4 sidebar">
+
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename">Duma Drones</span>
+          </a>
+          <p>Delivering necessities directly to your door with the help of modern drone technology. Ensuring fast, reliable, and safe deliveries to make life easier.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="https://web.facebook.com/profile.php?id=100081665997727" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/__lemayan__/" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/dennis-leleina-500a01201/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+  
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Drone Delivery</a></li>
+            <li><a href="#">Medical Supplies</a></li>
+            <li><a href="#">Food Delivery</a></li>
+            <li><a href="#">Emergency Services</a></li>
+            <li><a href="#">Logistics Solutions</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>Kenyatta Avenue</p>
+          <p>Nairobi, KN 20600</p>
+          <p>Kenya</p>
+          <p class="mt-4"><strong>Phone:</strong> <span>+254 715197671</span></p>
+          <p><strong>Email:</strong> <span>dumadrones@gmail.com</span></p>
+        </div>
+  
+        <div class="col-lg-12">
+          <!-- Google Map iframe for Kenyatta Avenue -->
+          <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19877.422947118332!2d36.82298476756973!3d-1.2920659981717663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f9b5041f44c87%3A0x62b7a9d7b5312957!2sKenyatta%20Ave%2C%20Nairobi%2C%20Kenya!5e0!3m2!1sen!2sus!4v1601322079872!5m2!1sen!2sus" width="100%" height="450" frameborder="0" style="border:0; width: 100%;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Duma Drones</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by <a href="">Lemayan Leleina</a>
+      </div>
+    </div>
+  
+  </footer>
+  
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
